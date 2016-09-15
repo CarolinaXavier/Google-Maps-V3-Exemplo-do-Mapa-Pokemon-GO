@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+		<head>
+				<meta charset="utf-8" />
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<title>Mapa Pokemon GO</title>
+
+				<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+				<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		</head>
+
+		<body>
+
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+					</button>
+					<a class="navbar-brand" href="#">Pokemon Go</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-navbar">
+				<form action="#">
+					<ul class="nav navbar-nav navbar-pokemon">
+						<li></li>
+						<li>
+							
+							<input type="checkbox" name="vehicle" class="check"  id="ginabox"  onclick="boxclick(this,'ginasio')" ></input><img src="img/pokestop.png"> Pokestop
+							<span class="badge visible-md visible-lg" id="pokestop"></span>
+							<span class="badge badge-pokemon visible-xs" id="pokestop1"></span>
+						</li>
+						<li>
+
+						<input type="checkbox" name="vehicle" class="check" id="pokebox"  onclick="boxclick(this,'pokestop')" ></input><img src="img/ginasio.png"> Ginásio
+							<span class="badge visible-md visible-lg" id="ginasio"></span>
+							<span class="badge badge-pokemon visible-xs" id="ginasio1"></span>
+						</li>
+						<li role="separator" class="divider"></li>
+
+
+					</ul>
+				</form>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+
+		<div id="mapa"></div>
+
+		<script src="js/jquery.min.js"></script>
+				<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+				<!-- Maps API Javascript -->
+				<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA166bG0eGMvZsUs_MYpsolXNfifEKJFB8"></script>
+
+				<!-- Caixa de informação -->
+				<script src="js/infobox.js"></script>
+
+				<!-- Agrupamento dos marcadores -->
+		<script src="js/markerclusterer.js"></script>
+
+				<!-- Arquivo de inicialização do mapa -->
+		<script src="js/mapa.js"></script>
+
+				<script type="text/javascript">
+						$(document).ready(function() {
+								var windowHeight = $(window).height();
+								var navBarHeight = $('nav').height();
+								$('#mapa').height(windowHeight - navBarHeight);
+
+								console.log($('#mapa').height());
+						});
+				</script>
+		</body>
+</html>

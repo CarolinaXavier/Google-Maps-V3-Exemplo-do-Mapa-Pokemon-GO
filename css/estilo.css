@@ -1,0 +1,47 @@
+.infoBox > .infoBox { background-color: #FFF; width: 300px;height: 250px; padding:10px;}
+.infoBox > .infoBox img {
+	width:100%;
+}
+.texto {align:center;font-family: Arial, Helvetica, sans-serif; font-size: 14px;}
+.infoBox:before { border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid #3fa7d8; top: -10px; content: ""; height: 0; position: absolute; width: 0; left: 138px }
+// .infoBox:before { border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid #3fa7d8; top: -10px; content: ""; height: 0; position: absolute; width: 0; left: 138px }
+
+.container{
+  width: 100%;
+  margin: 0 auto;
+  margin-top:50px;
+}
+
+#map_container{
+  position: relative;
+}
+#mapa{
+    height: 0;
+    overflow: hidden;
+
+    position: relative;
+}
+.navbar {
+	margin-bottom: 0;
+}
+.navbar-brand {
+	line-height: 25px;
+}
+.navbar-pokemon li {
+	margin-bottom:10px;
+	margin-top:10px
+}
+.navbar-pokemon img {
+	width:30px;
+	margin-left:10px;
+
+}
+.badge {
+	background-color: #739a63;
+}
+.navbar-pokemon .badge-pokemon {
+	float:right;
+	margin-right:10px;
+	margin-top:6px;
+
+}
